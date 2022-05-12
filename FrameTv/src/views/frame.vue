@@ -24,9 +24,6 @@
             </button>
           </li>
         </ul>
-        <div>
-          {{ typed }}
-        </div>
       </div>
     </div>
 
