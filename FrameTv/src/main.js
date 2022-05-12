@@ -2,7 +2,8 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
 import './index.css'
-
+import Vuex from 'vuex';
+import store from './store/store.js';
 
 
 // Import the functions you need from the SDKs you need
@@ -36,5 +37,6 @@ const firebase = initializeApp(firebaseConfig);
 const app = createApp(App)
 
 app.use(router)
-
+app.use(Vuex);
+app.use(store);
 app.mount('#app')

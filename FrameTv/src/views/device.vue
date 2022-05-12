@@ -21,4 +21,16 @@
   </div>
 </template>
 
-<script></script>
+<script>
+import router from "../router";
+
+export default {
+  mounted() {
+    let t = localStorage.getItem("accounttoken");
+    if (t != "") {
+    } else {
+      router.push("/");
+    }
+  },
+};
+</script>

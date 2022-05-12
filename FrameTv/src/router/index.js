@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import device from '../views/device.vue'
 import frame from '../views/frame.vue'
+import newdevice from '../views/newdeviceregister.vue'
 
 const router = createRouter({
     history: createWebHistory(
@@ -17,7 +18,11 @@ const router = createRouter({
             name: 'device',
             component: device
         },
-
+        {
+            path: '/newdevice',
+            name: 'newdevice',
+            component: newdevice
+        },
 
         {
             path: '/about',
