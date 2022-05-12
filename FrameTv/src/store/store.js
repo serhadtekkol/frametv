@@ -23,6 +23,13 @@ const store = new vuex.Store({
 
     },
     actions: {
+
+        registerUser({ commit, dispatch, state }, payload) {
+
+            console.log(payload)
+
+        },
+
         async newDevice({ commit, dispatch, state }, payload) {
             try {
                 const docRef = await addDoc(collection(db, "devicelist"), {

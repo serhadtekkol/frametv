@@ -26,10 +26,26 @@
         >
           Sign Up
         </button>
-        <button class="bg-purple-900 hover:bg-purple-400 rounded-sm py-3 px-4">
+        <button
+          @click="createuser"
+          class="bg-purple-900 hover:bg-purple-400 rounded-sm py-3 px-4"
+        >
           Sign In
         </button>
       </div>
     </div>
   </div>
 </template>
+<script>
+export default {
+  methods: {
+    createuser() {
+      console.log("basıldı");
+      this.$store
+        .dispatch("registerUser", "serhad")
+        .then((result) => {})
+        .catch((err) => {});
+    },
+  },
+};
+</script>
